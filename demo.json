@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "fb9a68f9-4ea6-4c43-bedd-ce3dc3d064d9",
+		"name": "chall",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "challenger",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "3bb0ecbc-9fda-4f1a-a12c-a01021920207",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apichallenges.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"apichallenges",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://apichallenges.herokuapp.com/challenger",
+					"protocol": "https",
+					"host": [
+						"apichallenges",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"challenger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://landing.trucker.group/#/executors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://trucker.group/api/v2/cargo_kinds",
+					"protocol": "https",
+					"host": [
+						"trucker",
+						"group"
+					],
+					"path": [
+						"api",
+						"v2",
+						"cargo_kinds"
+					],
+					"query": [
+						{
+							"key": "sign_in",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "curl -X POST -d \"from=KIX&to=NRT\" https://airportgap.dev-tester.com/api/airports/distance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://airportgap.dev-tester.com/api/airports/distance?from=KIX&to=NRT",
+					"protocol": "https",
+					"host": [
+						"airportgap",
+						"dev-tester",
+						"com"
+					],
+					"path": [
+						"api",
+						"airports",
+						"distance"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "KIX"
+						},
+						{
+							"key": "to",
+							"value": "NRT"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
