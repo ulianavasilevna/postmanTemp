@@ -1,16 +1,15 @@
-name: CI
+name: Newman Run
 
 on:
-  push:
-    branches: 
-    - main
+  pull_request:
+    branches:
+    - master
 
 jobs:
-  test-api:
-    runs-on: postman/newman:latest
+  newman:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@main
-
-    - name: Docker for newman
-      run: |
-        docker run -v $(pwd)/test:/etc/newman -t postman/newman:latest run "demo.json" --reporters="cli"
+      - uses: actions/checkout@master
+      - uses: matt-ball/newman-action@master
+        with:
+          collection: demo.json
